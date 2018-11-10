@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   get 'photos', to: 'agus#name'
   get 'kabigon', to: 'ono#name'
+  get 'json', to: 'json#index'
   root 'static_pages#home'
   # get 'agus/name'
   # get 'agus/age'
