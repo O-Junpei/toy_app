@@ -1,4 +1,17 @@
 Rails.application.routes.draw do
+  get 'product/new', to: 'product#new'
+  # curl localhost:3000/product/new
+
+  post 'product/new', to: 'product#new_post'
+  # curl localhost:3000/product/new -X POST
+
+  # curl -X POST -H "Content-Type: application/json" -d '{"Name":"sensuikan1973", "Age":"100"}' localhost:3000/product/new
+
+# curl -I http://localhost:3000/product/list
+
+
+  get 'product/list', to: 'product#list'
+
   get 'photos', to: 'agus#name'
   get 'kabigon', to: 'ono#name'
   get 'json', to: 'json#index'
