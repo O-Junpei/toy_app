@@ -1,11 +1,13 @@
 Rails.application.routes.draw do
   get 'product/new', to: 'product#new'
   # curl localhost:3000/product/new
+  # curl -X GET localhost:3000/product/new?bar=1\&fuga=2
+
 
   post 'product/new', to: 'product#new_post'
   # curl localhost:3000/product/new -X POST
 
-  # curl -X POST -H "Content-Type: application/json" -d '{"Name":"sensuikan1973", "Age":"100"}' localhost:3000/product/new
+  # curl -X POST -H "Content-Type: application/json" -d '{"barcode_id":234532, "name":"agussan", "price":42532}' localhost:3000/product/new
 
 # curl -I http://localhost:3000/product/list
 

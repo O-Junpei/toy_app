@@ -14,8 +14,11 @@ class ProductController < ApplicationController
     puts json_request
     puts '@@@@'
 
-
-    render :json => Product.all
+    product = Product.new
+    product.attributes = {barcode_id: json_request['barcode_id'], name: json_request['name'], price:json_request['price']}
+    product.save
+    result = {is_success: true}
+    render :json => result
   end
 
   def list
