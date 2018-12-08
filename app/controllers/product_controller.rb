@@ -15,7 +15,11 @@ class ProductController < ApplicationController
     puts '@@@@'
 
     product = Product.new
-    product.attributes = {barcode_id: json_request['barcode_id'], name: json_request['name'], price:json_request['price']}
+    product.attributes = {
+      barcode_id: json_request['barcode_id'],
+      image_url: json_request['image_url'], 
+      name: json_request['name'],
+      price:json_request['price']}
     product.save
     result = {is_success: true}
     render :json => result
