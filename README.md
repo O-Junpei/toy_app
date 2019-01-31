@@ -22,3 +22,8 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+
+$ bundle install --path vendor/bundle
+$ bundle exec rake db:reset
+$ bundle exec rails server
