@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   get 'product/new', to: 'product#new'
   # curl localhost:3000/product/new
   # curl -X GET localhost:3000/product/new?bar=1\&fuga=2
