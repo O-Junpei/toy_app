@@ -63,3 +63,8 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+# framework for creating administration style interfaces
+gem 'activeadmin'
+gem 'inherited_resources'
+gem 'devise' # if you need
